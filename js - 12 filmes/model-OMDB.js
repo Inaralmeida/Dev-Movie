@@ -52,7 +52,7 @@ class modelFilme
         this._duracao=dados.Runtime;
         this._escritor=dados.Writer;
         this._faixaEtaria=dados.Rated;
-        this._notasCriticas = dados.Ratings;
+        this._notasCriticas = dados.Ratings[0].Value;
         this._premios = dados.Awards;
         this._linguagem = dados.Language;
     }
