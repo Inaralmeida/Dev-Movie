@@ -30,7 +30,7 @@
                 <ul class="navbar-nav ml-auto mt-2 mt-lg-0 btn-stilo">
                     
                     <li class="nav-item active ">
-                        <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+                        <a class="nav-link" id="btnHome" href="#">Home<span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Quem somos</a>
@@ -58,8 +58,24 @@
     
     <main>
         
-        <section class="section-cards row justify-content-center w-75 m-auto p">
+        <section class="section-cards row justify-content-center w-75 m-auto ">
     
+        </section>
+
+        <section class="inativo section-info row justify-content-center w-75 m-auto py-5 border">
+        
+
+            
+            <img class="img-info col-12 col-md-6 col-lg-6 border" src="../imagensTest/preciosa.jpg" alt="">
+            
+                
+            <article class="col-12 col-md-6 col-lg3 py-5 border">
+                <label for="">NOME</label>
+                <h2 class="atributo-info" id="nomeFilme">NOME DO FILME</h2>
+
+                <label for="">Descrição:</label>
+                <P class="atributo-info" id="descricao">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam odio molestias reiciendis, consectetur quasi incidunt iusto repellat. Voluptatibus, consequatur natus impedit quos, iste vero sint magnam laboriosam, accusantium cupiditate labore.</P>
+            </article>  
         </section>
         
         
@@ -75,9 +91,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="../js - 12 filmes/model-OMDB.js"></script>
-        <script src="../js - 12 filmes/view-OMDB.js"></script>
-        <script src="../js - 12 filmes/controller-OMDB.js"></script>
-        <script src="../js - 12 filmes/index-OMDB.js"></script>
-        
+    <script src="../js - 12 filmes/view-OMDB.js"></script>
+    <script src="../js - 12 filmes/controller-OMDB.js"></script>
+    <script src="../js - 12 filmes/index-OMDB.js"></script>
+    
     </body>
     </html>
