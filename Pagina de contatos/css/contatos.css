@@ -1,0 +1,55 @@
+body{
+    background: black;
+}
+
+/* HEADER */
+.btn-stilo a{
+    border-radius: 7px;
+    text-align: center;
+    
+    border: 1px solid #000;
+    color: #fca311;
+    margin: 5px;
+    background: #000;
+}
+
+
+.btn-stilo a:hover, .btn-stilo a:active{
+    color: black;
+    border: 1px solid #fca311;
+    background: #fca311;
+}
+
+.botao-form button{
+    text-align: center;
+    display: inline-block;
+    color: #fca311;
+    background: #000;
+    height:50px;
+    line-height: 25px;
+    text-decoration: none;
+    border: none;
+    border-radius: 7px;
+    
+}
+.botao-form button:hover, .botao-form button:active{
+    color: black;
+    border: 1px solid #fca311;
+    background: #fca311;
+}
+
+/* MAIN */
+.card-contatos {
+    background-image: linear-gradient(#fff, #555);
+}
+
+.paragrafo-redes {
+    margin-bottom: 0px;
+}
+
+.card-link {
+    text-decoration: none;
+    color: #000000;
+    margin: 0px 0px 0px 0px;
+    width: 318.66px;
+}
