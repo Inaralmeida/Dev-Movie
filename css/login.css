@@ -4,8 +4,26 @@ body{
    
 }
 
+
+.btn-stilo a{
+    border-radius: 7px;
+    text-align: center;
+    
+    border: 1px solid #000;
+    color: #fca311;
+    margin: 5px;
+    background: #000;
+}
+
+
+.btn-stilo a:hover, .btn-stilo a:active{
+    color: black;
+    border: 1px solid #fca311;
+    background: #fca311;
+}
+
 .fundo-transparente{
-    background: rgba(255, 254, 254, 0.685);
+    background: rgba(0, 0, 0, 0.739);
 }
 .box-texto{
 
@@ -16,21 +34,17 @@ body{
 
 .input-form{
     height: 50px;
-    box-shadow: 5px 5px 8px black;
-
-    /* margin-left: 55px; */
 }
 
 .botao-input a{
     text-align: center;
+    border: 1px solid #fff;
     display: inline-block;
     color: #fca311;
     background: #000;
     height:50px;
     line-height: 50px;
     text-decoration: none;
-    box-shadow: 5px 5px 8px black;
-
     
 }
 .botao-input a:hover, .botao-input a:active{
