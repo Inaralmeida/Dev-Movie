@@ -41,6 +41,21 @@ body{
     max-width: 18rem;
     height: auto;
     margin: 2%;
+    padding: 15px;
+    background-image: linear-gradient(to top, #555, #999);
+    text-decoration: none;
+    box-shadow: 8px -8px 8px #555;
+    border: none;
+}
+
+.card-titulo{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fca311;
+}
+.card h5:hover{
+    color: #000;
+    text-decoration: none;
 }
 
 .card-img-top{
