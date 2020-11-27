@@ -12,21 +12,17 @@ class UserModelLocalizacao{
     buscaEndereco(){
         
         let cep = this._cep; 
+
+       
         let requisicao  = new XMLHttpRequest(); 
         requisicao.open("GET",  `https://viacep.com.br/ws/` + cep + `/json/unicode/`  , false)
         requisicao.addEventListener("load", () => {
-           try{
-                if(requisicao.status == 200){
+        
                     let objeto = this._processaResponse(requisicao.responseText); 
                     this._atualiza (objeto); 
-            }else if (requisicao.status == 400){
-                      throw new Error("Usuário Inexistente")
-            }
-        }catch(err){
-            console.log(err.message)
-        }
-            
+
         })
+       
         requisicao.send(); 
     }
     
