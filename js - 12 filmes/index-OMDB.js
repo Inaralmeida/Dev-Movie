@@ -15,8 +15,25 @@ function criaFilme (listaFilmes)
 criaFilme(lista12Filmes);
 
 
+// /* TESTE */
+//  let BtnBuscaFilme = document.querySelector('#BtnBuscaFilme')
+
+//  BtnBuscaFilme.addEventListener('click', ()=>{
+//      let sectionCards = document.querySelector('.section-cards ')
+//      let sectionInformacoes = document.querySelector('.section-informacoes')
+
+//      sectionCards.classList.add('inativo')
+
+//      sectionInformacoes.classList.remove('inativo')
+//  })
 
 
+//  let btnHome = document.querySelector('#btnHome')
+//  btnHome.addEventListener('click', ()=>{
+//     let sectionCards = document.querySelector('.section-cards ')
+//     let sectionInformacoes = document.querySelector('.section-informacoes')
 
+//     sectionInformacoes.classList.add('inativo')
 
-
+//     sectionCards.classList.remove('inativo')
+// })

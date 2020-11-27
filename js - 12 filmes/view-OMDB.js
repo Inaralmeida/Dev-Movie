@@ -3,14 +3,18 @@ class viewFilme
 
     mostraDados(dados,i)
     {   
-        
-        let titulo = document.querySelector('#card-titulo'+i)
-        titulo.textContent = dados.getTitulo();
+        let section = document.querySelector('.section-cards')
 
-        /* let descricao = document.querySelector('#card-text'+i)
-        descricao.textContent = dados.getDescricao(); */
+        let card = document.createElement('article')
+        card.classList.add('card')
+        section.appendChild(card)
 
-        let capa = document.querySelector('#card-img-top'+i)
-        capa.src = dados.getCapa();
+        card.innerHTML=
+        `
+        <img src="${dados.getCapa()}" class="card-img-top" id="card-img-top${i}" alt="...">
+        <div class="card-body">
+            <h5 class="card-titulo" id='card-titulo${i}'>${dados.getTitulo()}</h5>
+   
+        </div>`       
     }
 }
