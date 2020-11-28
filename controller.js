@@ -5,7 +5,7 @@ class UserControllerLocalizacao{
         dados.buscaEndereco(); 
         
         let view = new UserViewLocalizacao();
-        view.render( dados ); 
+        view.render(dados); 
     }
   
 }

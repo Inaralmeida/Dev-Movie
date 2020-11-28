@@ -17,12 +17,38 @@ class UserModelLocalizacao{
         let requisicao  = new XMLHttpRequest(); 
         requisicao.open("GET",  `https://viacep.com.br/ws/` + cep + `/json/unicode/`  , false)
         requisicao.addEventListener("load", () => {
-        
+            if(requisicao.status === 200){
                     let objeto = this._processaResponse(requisicao.responseText); 
                     this._atualiza (objeto); 
 
+            }else if(requisicao.status == 400){
+                console.log()
+            }
         })
-       
+
+    
+        let cepFinal = cep.split(".").join("").split("-").join(""); 
+
+           var validacep = /^[0-9]{8}$/; 
+
+           if(!validacep.test(cepFinal)){
+                document.getElementById("erro").innerHTML = "ERRO!"
+                document.getElementById("cep").value = ""; 
+                document.getElementById("logradouro").value = ""; 
+                document.getElementById("bairro").value = "";  
+                document.getElementById("estado").value = ""; 
+                document.getElementById("UF").value = ""; 
+            
+            
+            }else{
+                document.getElementById("logradouro").value = ""; 
+                document.getElementById("bairro").value = "";  
+                document.getElementById("estado").value = ""; 
+                document.getElementById("UF").value = ""; 
+                document.getElementById("erro").innerHTML = "";
+            }
+           
+           
         requisicao.send(); 
     }
     
