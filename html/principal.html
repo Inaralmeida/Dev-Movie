@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <title>Principal</title>
     <!-- Required meta tags -->
@@ -16,36 +16,42 @@
     <header>
         
         <!-- NavBar -->
-        <nav class="navbar navbar-expand-md navbar-dark bg-dark ">
-            <a class="navbar-brand" href="#">Logo</a>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+            <<a class="navbar-brand" href="#">
+                <img src="../icons/logo.png" width="200" height="60" class="d-inline-block align-top ml-1" alt="" loading="lazy">
+                
+              </a>
             
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             
-            <div class="collapse navbar-collapse " id="navbarTogglerDemo01">
+            <div class="collapse navbar-collapse justify-content-end " id="navbarTogglerDemo01">
                 
                 
                 
-                <ul class="navbar-nav ml-auto mt-2 mt-lg-0 btn-stilo">
+                
+                
+                <ul class="navbar-nav   botao-input ">
                     
-                    <li class="nav-item active ">
-                        <a class="nav-link" id="btnHome" href="#">Home<span class="sr-only">(current)</span></a>
+                    <li class="nav-item active  ">
+                        <a class="" id="btnHome" href="#">Home<span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Quem somos</a>
+                        <a class="" href="../Pagina de contatos/html/index_contatos.html">Quem somos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="login.html">Sair</a>
+                        <a class="" href="login.html">Sair</a>
                     </li>
-                    
+
+
+
                 </ul>
-                
-                <form class="form-inline my-2 my-lg-0 botao-form">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search" id="inputFilmes"">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="btnBusca">Buscar</button>
-                </form>
-                
+
+                <form class="form-inline my-2 my-lg-0 col-lg-5 col-xl-3   botao-form justify-content-end">
+                    <input class="form-control col-10 " type="search" placeholder="Search" id="inputFilmes"">
+                    <button class="btn  my-2 my-sm-0 col-1 col-lg-2 col-xl-2 w-100" type="submit" id="btnBusca"><img class="icon-nav" src="../icons/lupa.svg" alt=""></button>
+                </form>      
                 
             </div>
         </nav>
@@ -58,11 +64,11 @@
     
     <main>
         
-        <section class="inativo section-cards row justify-content-center w-75 m-auto ">
+        <section class=" section-cards row justify-content-center w-100 m-auto ">
     
         </section>
 
-        <section class=" section-info row justify-content-center w-75 m-auto py-5 border">
+        <section class="inativo section-info row justify-content-center w-75 m-auto py-5 border">
         
 
             
@@ -78,6 +84,9 @@
 
                 <label  for="">Ano:</label>
                 <P class="atributo-info d-inline" id="ano">85</P><br>
+
+                <label  for="">Atores:</label>
+                <P class="atributo-info d-inline" id="atores">atores</P><br>
 
                 <label  for="">Diretor(a):</label>
                 <P class="atributo-info d-inline" id="diretor">diretor</P><br>
@@ -105,20 +114,16 @@
 
                 <label  for="">Idioma:</label>
                 <P class="atributo-info d-inline" id="idioma">XPTO</P><br>
-
-
-        
-      <!--;
-        this._produtora='Production';
-        this._duracao='Runtime';
-        this._escritor='Writer';
-        this._faixaEtaria='Rated';
-        this._notasCriticas = 'Ratings';
-        this._premios = 'Awards'
-        this._linguagem = 'Language' --> 
             </article>  
         </section>
         
+
+        <section class=" inativo section-erro row justify-content-center w-75 mx-auto py-5 my-5">
+            <article class="text-light text-center py-5">
+                <h2 class="d-inline">ERRO <h2 class="d-inline" id="numErro">404</h2></h2>
+                <H3>Filme não encontrado</h3>
+            </article>
+        </section>
         
     </main>
     

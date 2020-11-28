@@ -1,51 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;1,500;1,900&display=swap');
+
+
 body{
     background: black;
 }
 
-.btn-stilo a{
-    border-radius: 7px;
-    text-align: center;
-    
-    border: 1px solid #000;
-    color: #fca311;
-    margin: 5px;
-    background: #000;
-}
 
-
-.btn-stilo a:hover, .btn-stilo a:active{
-    color: black;
-    border: 1px solid #fca311;
-    background: #fca311;
-}
-
-.botao-form button{
+.botao-input a{
     text-align: center;
     display: inline-block;
     color: #fca311;
-    background: #000;
+    background: rgba(0, 0, 0, 0);
     height:50px;
-    line-height: 25px;
+    line-height: 50px;
     text-decoration: none;
-    border: none;
-    border-radius: 7px;
+    margin: 0 10px;
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+
     
 }
-.botao-form button:hover, .botao-form button:active{
-    color: black;
-    border: 1px solid #fca311;
-    background: #fca311;
+.botao-input a:hover, .botao-input a:active{
+    color: #1185B1;
 }
+
+.botao-form button{
+    width: 20%;
+    margin-left: -5px;
+}
+
+.icon-nav{
+    width: 100%;
+}
+
 .card{
     min-width: 18rem;
     max-width: 18rem;
     height: auto;
-    margin: 2%;
+    margin: 5%;
     padding: 15px;
     background-image: linear-gradient(to top, #555, #999);
     text-decoration: none;
-    box-shadow: 8px -8px 8px #555;
-    border: none;
+    box-shadow: 7px -7px 8px   #1184b1c0;
+    cursor: pointer;
 }
 
 .card-titulo{
