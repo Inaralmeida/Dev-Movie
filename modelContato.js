@@ -24,12 +24,10 @@ class UserModelContato{
     let  email = document.getElementById('email').value
     let  senha = document.getElementById('senha').value
     let  confirmacaoSenha = document.getElementById('confirmacaoSenha').value
-    if(nome.length > 0){
+    if(nome.length == 0){
         document.getElementById("erro").innerHTML = "Você precisa digitar um nome válido"
-    }else if(email.length > 0){
+    }else if(email.length == 0){
         document.getElementById("erro").innerHTML = "Você precisa digitar um email válido"
-    }else if(senha.length !== confirmacaoSenha.length > 0){
-        document.getElementById("erro").innerHTML = "As senhas precisam ser iguais."
     }
 
    }
