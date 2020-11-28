@@ -11,44 +11,53 @@ class UserModelLocalizacao{
     
     buscaEndereco(){
         
-        let cep = this._cep;
-        
+        let cep = this._cep; 
 
        
         let requisicao  = new XMLHttpRequest(); 
         requisicao.open("GET",  `https://viacep.com.br/ws/` + cep + `/json/unicode/`  , false)
         requisicao.addEventListener("load", () => {
-        
+            if(requisicao.status === 200){
                     let objeto = this._processaResponse(requisicao.responseText); 
                     this._atualiza (objeto); 
 
+            }else if(requisicao.status == 400){
+                console.log()
+            }
         })
 
-        let cepFinal= cep.split('.').join("").split("-").join(""); //remove o -
-        var validacep = /^[0-9]{8}$/; //regex
-        if(!validacep.test(cepFinal)){
-             document.getElementById("erro").innerHTML = "ERRO!"
-             document.getElementById("cep").value = ""; 
-             document.getElementById("logradouro").value = ""; 
-             document.getElementById("bairro").value = "";  
-             document.getElementById("estado").value = ""; 
-             document.getElementById("UF").value = ""; 
-         
-         }else if(undefined){
-             document.getElementById("logradouro").value = ""; 
-             document.getElementById("bairro").value = "";  
-             document.getElementById("estado").value = ""; 
-             document.getElementById("UF").value = ""; 
-             document.getElementById("erro").innerHTML = ""
-         }else{
-            document.getElementById("logradouro").value = ""; 
-            document.getElementById("bairro").value = "";  
-            document.getElementById("estado").value = ""; 
-            document.getElementById("UF").value = ""; 
-            document.getElementById("erro").innerHTML = ""
-        }
-       
-        requisicao.send();
+        
+
+    
+        let cepFinal = cep.split(".").join("").split("-").join(""); 
+
+           var validacep = /^[0-9]{8}$/; 
+
+           if(!validacep.test(cepFinal)){
+                document.getElementById("erro").innerHTML = "ERRO!"
+                document.getElementById("cep").value = ""; 
+                document.getElementById("logradouro").value = ""; 
+                document.getElementById("bairro").value = "";  
+                document.getElementById("estado").value = ""; 
+                document.getElementById("UF").value = ""; 
+            
+            
+            }else if(undefined){
+                document.getElementById("logradouro").value = ""; 
+                document.getElementById("bairro").value = "";  
+                document.getElementById("estado").value = ""; 
+                document.getElementById("UF").value = ""; 
+                document.getElementById("erro").innerHTML = ""
+            }else{
+                document.getElementById("logradouro").value = ""; 
+                document.getElementById("bairro").value = "";  
+                document.getElementById("estado").value = ""; 
+                document.getElementById("UF").value = ""; 
+                document.getElementById("erro").innerHTML = "";
+            }
+           
+           
+        requisicao.send(); 
     }
     
 
