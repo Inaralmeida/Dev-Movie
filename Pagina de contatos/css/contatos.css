@@ -39,12 +39,32 @@ body{
 }
 
 /* MAIN */
-.card-contatos {
-    background-image: linear-gradient(#fff, #555);
+.main-contatos {
+    margin-top: 15px;
+}
+
+.card-size {
+    margin-left: 5px;
+    margin-right: 5px;
+    padding: 0px 0px;
+    background-image: linear-gradient(#333, #777);
+}
+
+.card-body {
+    margin: 0px 0px 0px;
+}
+
+.card-title {
+    color: #ffffff;
 }
 
 .paragrafo-redes {
     margin-bottom: 0px;
+    font-size: 120%;
+}
+
+.ul a {
+    font-size: 120%;
 }
 
 .card-link {
@@ -52,4 +72,8 @@ body{
     color: #000000;
     margin: 0px 0px 0px 0px;
     width: 318.66px;
+}
+
+.card-link:hover {
+    color: #fca311;
 }
