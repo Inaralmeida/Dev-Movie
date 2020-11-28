@@ -29,7 +29,24 @@ class modelFilme
             if (requisicao.status == 200 && requisicao.readyState == 4)
             {
                 let dados = JSON.parse(requisicao.responseText)
-                this._atualizaDados(dados)
+                if (dados.Response=="True")
+                {
+                    this._atualizaDados(dados)
+                }
+                else
+                {
+                    let sectionCards = document.querySelector('.section-cards ')
+                    sectionCards.classList.add('inativo')
+
+                    let sectionInformacoes = document.querySelector('.section-info')
+                    sectionInformacoes.classList.add('inativo')
+
+                    let sectionErro = document.querySelector('.section-erro')
+                    sectionErro.classList.remove('inativo')
+                }
+            }
+            else{
+                console.log(doideira)
             }
         });
         
@@ -103,7 +120,15 @@ class modelFilme
         return this._faixaEtaria;
     }
     getnotasCriticas()
-    {
+    {   
+        if (this._notasCriticas=='Ratings')
+        {
+            this._notasCriticas = 'N/A'
+        }
+        else
+        {
+            this._notasCriticas
+        }
         return this._notasCriticas;
     }
     getPremios()
