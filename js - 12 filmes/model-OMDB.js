@@ -33,7 +33,7 @@ class modelFilme
                 {
                     this._atualizaDados(dados)
                 }
-                else
+                /* else
                 {
                     let sectionCards = document.querySelector('.section-cards ')
                     sectionCards.classList.add('inativo')
@@ -43,7 +43,7 @@ class modelFilme
 
                     let sectionErro = document.querySelector('.section-erro')
                     sectionErro.classList.remove('inativo')
-                }
+                } */
             }
             else{
                 console.log(doideira)
