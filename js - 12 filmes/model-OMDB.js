@@ -35,18 +35,23 @@ class modelFilme
                 }
                 else
                 {
-                    let sectionCards = document.querySelector('.section-cards ')
-                    sectionCards.classList.add('inativo')
+                   let main = document.querySelector('main')
+                   main.innerHTML =
+                    `<section class=" section-erro row justify-content-center w-75 mx-auto py-5 my-5">
+                        <article class="text-light text-center py-5">
+                        <h2 class="d-inline">ERRO <h2 class="d-inline" id="numErro">404</h2></h2>
+                        <H3>Filme não encontrado</h3>
+                            <div class="botao-erro">
+                                <button id='tenteNovamente'>Tente Novamente</button>
+                            </div>
+                    </article>
+                    
+                    </section>`
 
-                    let sectionInformacoes = document.querySelector('.section-info')
-                    sectionInformacoes.classList.add('inativo')
-
-                    let sectionErro = document.querySelector('.section-erro')
-                    sectionErro.classList.remove('inativo')
                 }
             }
             else{
-                console.log(doideira)
+                console.log('doideira')
             }
         });
         

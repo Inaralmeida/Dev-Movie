@@ -7,6 +7,8 @@ let BtnBuscaFilme = document.querySelector('#btnBusca')
 
 let btnHome = document.querySelector('#btnHome')
 
+let tenteNovamente = document.querySelector('#tenteNovamente')
+
 let botoesTitulo = []
 
 //#################### Funções ##########################333
@@ -34,6 +36,12 @@ BtnBuscaFilme.addEventListener('click', (event)=>
 
 // Ao clicar no botao home recarrega a pagina
 btnHome.addEventListener('click', ()=>
+{
+    window.location.reload()
+})
+
+//Ao clicar no botoao tente novamente na pagina de erro, recarrega a pagina
+tenteNovamente.addEventListener('click',()=>
 {
     window.location.reload()
 })

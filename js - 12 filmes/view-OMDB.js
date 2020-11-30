@@ -18,7 +18,7 @@ class viewFilme
 
     mostraDadosBusca(dados)
     {
-        let sectionCards = document.querySelector('.section-cards ')
+        let sectionCards = document.querySelector('.section-cards')
         sectionCards.classList.add('inativo')
 
         let sectionInformacoes = document.querySelector('.section-info')
