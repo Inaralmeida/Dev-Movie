@@ -38,7 +38,7 @@ btnHome.addEventListener('click', ()=>
     window.location.reload()
 })
 
-// Ao clicar no titulo do filme, abre os detalhes
+// Ao clicar no titulo de um dos 12 filmes predefinidos, abre os detalhes
 botoesTitulo.forEach(function(botaoTitulo, index)
 {
     botaoTitulo = document.querySelector(`#card-titulo${[index]}`)

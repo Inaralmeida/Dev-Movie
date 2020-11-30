@@ -32,7 +32,6 @@ class viewFilme
 
         let descricao = document.querySelector('#descricao')
         descricao.textContent = dados.getDescricao();
-        console.log(dados.getDescricao())
 
         let ano = document.querySelector('#ano')
         ano.textContent = dados.getAno();
