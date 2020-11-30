@@ -21,6 +21,9 @@ class viewFilme
         let sectionCards = document.querySelector('.section-cards')
         sectionCards.classList.add('inativo')
 
+        let sectionErro = document.querySelector('.section-erro')
+        sectionErro.classList.add('inativo')
+
         let sectionInformacoes = document.querySelector('.section-info')
         sectionInformacoes.classList.remove('inativo')
 
@@ -66,5 +69,17 @@ class viewFilme
         let linguagem = document.querySelector('#idioma')
         linguagem.textContent = dados.getLinguagem();
     
+    }
+
+    mostraErro()
+    {   
+        let sectionCards = document.querySelector('.section-cards')
+        sectionCards.classList.add('inativo')
+
+        let sectionInformacoes = document.querySelector('.section-info')
+        sectionInformacoes.classList.add('inativo')
+
+        let sectionErro = document.querySelector('.section-erro')
+        sectionErro.classList.remove('inativo')
     }
 }

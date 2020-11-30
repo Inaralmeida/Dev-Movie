@@ -16,6 +16,7 @@ class modelFilme
         this._notasCriticas = 'Ratings';
         this._premios = 'Awards'
         this._linguagem = 'Language'
+        this._response = 'Response'
     }
 
     buscaFilme(filme)
@@ -29,29 +30,7 @@ class modelFilme
             if (requisicao.status == 200 && requisicao.readyState == 4)
             {
                 let dados = JSON.parse(requisicao.responseText)
-                if (dados.Response=="True")
-                {
-                    this._atualizaDados(dados)
-                }
-                else
-                {
-                   let main = document.querySelector('main')
-                   main.innerHTML =
-                    `<section class=" section-erro row justify-content-center w-75 mx-auto py-5 my-5">
-                        <article class="text-light text-center py-5">
-                        <h2 class="d-inline">ERRO <h2 class="d-inline" id="numErro">404</h2></h2>
-                        <H3>Filme não encontrado</h3>
-                            <div class="botao-erro">
-                                <button id='tenteNovamente'>Tente Novamente</button>
-                            </div>
-                    </article>
-                    
-                    </section>`
-
-                }
-            }
-            else{
-                console.log('doideira')
+                this._atualizaDados(dados)
             }
         });
         
@@ -77,6 +56,7 @@ class modelFilme
         this._notasCriticas = dados.Ratings[0].Value;
         this._premios = dados.Awards;
         this._linguagem = dados.Language;
+        this._response = dados.Response
     }
 
     getTitulo()
@@ -126,7 +106,7 @@ class modelFilme
     }
     getnotasCriticas()
     {   
-        if (this._notasCriticas=='Ratings')
+        if (this._notasCriticas=='Ratings' || this._notasCriticas==undefined )
         {
             this._notasCriticas = 'N/A'
         }
@@ -143,6 +123,11 @@ class modelFilme
     getLinguagem()
     {
         return this._linguagem;
+    }
+
+    getResponse()
+    {
+        return this._response
     }
 
 }
