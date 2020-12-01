@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;1,500;1,900&display=swap');
+
+
+body{
+    background: black;
+}
+
+.font{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
+
+}
+
+label{
+    color: #fca311;
+}
+
+
+.botao-input a{
+    text-align: center;
+    display: inline-block;
+    color: #fca311;
+    background: rgba(0, 0, 0, 0);
+    height:50px;
+    line-height: 50px;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+
+    
+}
+.botao-input a:hover, .botao-input a:active{
+    color: #1185B1;
+}
+
+.botao-erro button{
+    text-align: center;
+    border: 1px solid #fff;
+    display: inline-block;
+    color: #fca311;
+    background: #000;
+    height:50px;
+    line-height: 25px;
+    text-decoration: none;
+    
+}
+.botao-erro button:hover, .botao-erro button:active{
+    color: black;
+    border: 1px solid #fca311;
+    background: #fca311;
+}
+
+.botao-form button{
+    width: 100%;
+    margin-left: -5px;
+}
+
+.icon-nav{
+    width: 100%;
+}
+
+.card{
+    min-width: 18rem;
+    max-width: 18rem;
+    height: auto;
+    margin: 5%;
+    padding: 15px;
+    background-image: linear-gradient(to top, #555, #999);
+    text-decoration: none;
+    box-shadow: 2px -2px 18px   #f5be65af;
+    border: none;
+    cursor: pointer;
+}
+
+.card-titulo{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fca311;
+}
+.card h5:hover{
+    color: #000;
+    text-decoration: none;
+}
+
+.card-img-top{
+    object-fit: cover;
+    object-position: 0 30%;
+    height: 250px;
+
+}
+.card-text{
+    height: 150px;
+    text-align: justify ;
+    font-size: 15px;
+}
+
+.card-titulo{
+    text-align: center;
+    text-transform: uppercase;
+}
+/* LIMPA TELA */
+
+.inativo{
+    display: none;
+}
+
+/* INFORMAÇÔES */
+.section-info{
+    color: #fff;
+    border: 10px ridge #fca311;
+    box-shadow: 2px -2px 18px white;
+    background-image: linear-gradient(to bottom, #333, #333);
+}
+
+.img-info{
+    width: 90%;
+    
+    height: auto;
+}
+
+/* boas-vindas */
+.fundo-transparente{
+    background: #474849d5;
+   
+}
+
+.box-texto{
+
+    margin: 5px auto;
+    
+    
+}
