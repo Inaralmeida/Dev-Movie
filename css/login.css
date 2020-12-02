@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;1,500;1,900&display=swap');
+
+
+body{
+    background-image:  url(https://static.itavisen.no/media/2019/06/netflix-popout.jpg) ;
+    background-repeat: no-repeat;
+    font-family: 'Share Tech Mono', monospace;
+    
+}
+
+
+.logo-nav{
+    width: 15%;
+    margin: 0;
+}
+
+.fundo-transparente{
+    background: #343a40c2;
+    margin-top: -70px;
+}
+.box-texto{
+
+    margin: 15% auto;
+    
+    
+}
+
+.input-form{
+    height: 50px;
+}
+
+.botao-input a{
+    text-align: center;
+    border: 1px solid #fca311;
+    display: inline-block;
+    color: #fca311;
+    background: rgba(0, 0, 0, 0);
+    height:50px;
+    line-height: 50px;
+    text-decoration: none;
+    
+}
+.botao-input a:hover, .botao-input a:active{
+    color: rgb(255, 255, 255);
+    border: 1px solid #fca311;
+    background: #fca311;
+}
+
+
+
+/* BOTÂO FORMULARIOS */
+.botao-form button{
+    text-align: center;
+    border: 1px solid #fff;
+    display: inline-block;
+    color: #fca311;
+    background: #000;
+    height:50px;
+    line-height: 25px;
+    text-decoration: none;
+    
+}
+.botao-form button:hover, .botao-form button:active{
+    color: black;
+    border: 1px solid #fca311;
+    background: #fca311;
+}
+
+
+
+.link-modal-entrar a{
+    color: #fca311
+}
+.link-modal-entrar a:hover{
+    color: black
+}
+
+main{
+    min-height: 300px;
+}
+
+footer{
+    width: 100%;
+    height: auto;
+    font-size: 16px;
+    background: #343A40;
+    color: #fff;
+    
+}
+
+footer p{
+    margin: 5px;
+}
+
+
+.linkFooter a{
+    text-decoration: none;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+
+
+}
+
+.linkFooter a:hover{
+    color: #fca311;
+    text-decoration: none;
+
+
+}
+
+.linkFooter a span{
+    color: #fca311;
+    font-weight: bold;
+
+}
+
+.linkFooter a span:hover{
+    color: #fff;
+}
+
+.nomesFooter{
+    text-align: center;
+    margin-top:1px;
+    font-family: 'Montserrat', sans-serif;
+
+}
+.nomefooter{
+    font-size: 15px;
+}
+
+
+/* INATIVO */
+.erro{
+    color: red;
+}
+
+.inativo{
+    display: none;
+}
