@@ -7,6 +7,8 @@ let BtnBuscaFilme = document.querySelector('#btnBusca')
 
 let btnHome = document.querySelector('#btnHome')
 
+let tenteNovamente = document.querySelector('#tenteNovamente')
+
 let botoesTitulo = []
 
 //#################### Funções ##########################333
@@ -32,11 +34,6 @@ BtnBuscaFilme.addEventListener('click', (event)=>
     inputFilmes.value = ""
 })
 
-// Ao clicar no botao home recarrega a pagina
-btnHome.addEventListener('click', ()=>
-{
-    window.location.reload()
-})
 
 // Ao clicar no titulo de um dos 12 filmes predefinidos, abre os detalhes
 botoesTitulo.forEach(function(botaoTitulo, index)
@@ -47,5 +44,17 @@ botoesTitulo.forEach(function(botaoTitulo, index)
         controller.mostraBuscarFilmes(botaoTitulo.textContent)    
     })
     
+})
+
+// Ao clicar no botao home recarrega a pagina
+btnHome.addEventListener('click', ()=>
+{
+    window.location.reload()
+})
+
+// ao clicar no botao tente novamente recarrega a pagina
+tenteNovamente.addEventListener('click',()=>
+{
+    window.location.reload()
 })
 

@@ -1,22 +1,29 @@
 class controllerFilme
 {
-
+  
     mostra12filmes(filme,i)
     {   
-        let model = new modelFilme();
-        model.buscaFilme(filme)
+        let model12Filmes = new modelFilme();
+        model12Filmes.buscaFilme(filme)
 
-        let view = new viewFilme();
-        view.mostraDados(model,i)
+        let view12Filmes = new viewFilme();
+        view12Filmes.mostraDados(model12Filmes,i)
     }
     
     mostraBuscarFilmes(filme)
     {
-        let model = new modelFilme();
-        model.buscaFilme(filme)
-
-        let view = new viewFilme();
-        view.mostraDadosBusca(model)
+        let modelBuscarFilmes = new modelFilme();
+        modelBuscarFilmes.buscaFilme(filme)
+        let viewBuscarFilmes = new viewFilme();
+        
+        if (modelBuscarFilmes.getResponse()=='True')
+        {
+            viewBuscarFilmes.mostraDadosBusca(modelBuscarFilmes)
+        }
+        else
+        {
+            viewBuscarFilmes.mostraErro()
+        }   
     }
 
 }

@@ -16,6 +16,7 @@ class modelFilme
         this._notasCriticas = 'Ratings';
         this._premios = 'Awards'
         this._linguagem = 'Language'
+        this._response = 'Response'
     }
 
     buscaFilme(filme)
@@ -29,28 +30,11 @@ class modelFilme
             if (requisicao.status == 200 && requisicao.readyState == 4)
             {
                 let dados = JSON.parse(requisicao.responseText)
-                if (dados.Response=="True")
-                {
-                    this._atualizaDados(dados)
-                }
-                /* else
-                {
-                    let sectionCards = document.querySelector('.section-cards ')
-                    sectionCards.classList.add('inativo')
-
-                    let sectionInformacoes = document.querySelector('.section-info')
-                    sectionInformacoes.classList.add('inativo')
-
-                    let sectionErro = document.querySelector('.section-erro')
-                    sectionErro.classList.remove('inativo')
-                } */
-            }
-            else{
-                console.log(doideira)
+                this._atualizaDados(dados)
             }
         });
         
-        requisicao.open('GET',`http://www.omdbapi.com/?t=${filmeRequiscao}&apikey=2f800a19`, false);
+        requisicao.open('GET',`https://www.omdbapi.com/?t=${filmeRequiscao}&apikey=2f800a19`, false);
 
         requisicao.send();
 
@@ -72,6 +56,7 @@ class modelFilme
         this._notasCriticas = dados.Ratings[0].Value;
         this._premios = dados.Awards;
         this._linguagem = dados.Language;
+        this._response = dados.Response
     }
 
     getTitulo()
@@ -121,7 +106,7 @@ class modelFilme
     }
     getnotasCriticas()
     {   
-        if (this._notasCriticas=='Ratings')
+        if (this._notasCriticas=='Ratings' || this._notasCriticas==undefined )
         {
             this._notasCriticas = 'N/A'
         }
@@ -138,6 +123,11 @@ class modelFilme
     getLinguagem()
     {
         return this._linguagem;
+    }
+
+    getResponse()
+    {
+        return this._response
     }
 
 }

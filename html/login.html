@@ -1,31 +1,31 @@
 <!doctype html>
 <html lang="pt-br">
 <head>
-  <title>login</title>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, 
-  shrink-to-fit=no">
-  
-  <!-- liks css -->
-  <link rel="stylesheet" href="../css/reset.css">
-  <link rel="stylesheet" href="../css/login.css">
+    <title>login</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, 
+    shrink-to-fit=no">
+    
+    <!-- liks css -->
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/login.css">
   
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
-<body class="img-fluid h-0" >
+<body class=" h-0" style="background-color: black;" >
   
   <!-- Header -->
   <header>
     
     <!-- NavBar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-0  pr-3 " >
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-0  pr-3" >
       <a class="navbar-brand" href="#">
-        <img src="../icons/logo.png" width="220" height="60" class="d-inline-block align-top" alt="" loading="lazy">
+        <img src="../icons/logo2.png" width="300" height="120" class="d-inline-block align-top" alt="" loading="lazy">
         
       </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler col-12 col-md-1 mx-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
@@ -33,10 +33,6 @@
           <li class="nav-item active botao-input">
             <a class="col-12 m-0 text-decoration-none text-uppercase" data-toggle="modal" data-target="#Modal-entrar"  href="#">Entrar <span class="sr-only">(current)</span></a>
           </li>
-          
-
-
-          
         </ul>
       </div>
     </nav>
@@ -66,11 +62,18 @@
     
     
   </main>
-
-  <footer class="fixed-bottom">
-
-    <p class="text-center">Alguma coisa legal</p>
+    
+  <footer class="fixed-bottom linkFooter">
+    <p class="text-center">Copyright &copy; 2020 <a href="index_contatos.html" ">&lt;<span class="amarelo">Dev:</span>movie&gt;</a></p>
+    <ul class="list-inline nomesFooter">
+      <li class="list-inline-item nomefooter">Erica Fernandes</li>
+      <li class="list-inline-item nomefooter">Greiciane Araujo</li>
+      <li class="list-inline-item nomefooter">Inara Almeida</li>
+      <li class="list-inline-item nomefooter">Thiago Araujo</li>
+      <li class="list-inline-item nomefooter">Weverton Bezerra</li>
+    </ul>
   </footer>
+    
   
   
   <!-- MODAL ENTRAR -->
@@ -122,7 +125,7 @@
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
-        <div class="modal-body">
+        <div class="modal-body" id="modalEsqueciASenha">
           <article>
             <h4 class="text-center">Informe o seu e-mail e enviaremos o link para redefinição de senha</h4>
           </article>
@@ -130,9 +133,10 @@
             <label for="exampleFormControlInput1">Email</label>
             <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="nome@example.com">
           </div>
+
         </div>
         <div class="modal-footer botao-form">
-          <button type="button" class="btn ">ENVIAR</button>
+          <button type="button" class="btn " id="btnEsqueciASenha">ENVIAR</button>
         </div>
       </div>
     </div>
@@ -154,19 +158,23 @@
             <div class="form-group">
               <label for="nome">Nome</label>
               <input type="text" class="form-control" id="nome" placeholder="Nome completo">
+              <p class="erro inativo" id="erroNomeCad">Nome de usuario invalido</p>
             </div>
             <div class="form-group">
               <label for="email">E-mail</label>
-              <input type="text" class="form-control" id="email" placeholder="nome@exemplo.com">
+              <input type="text" class="form-control" id="emailCadastro" placeholder="nome@exemplo.com">
+              <p class="erro inativo" id="erroEmailCad">Email invalido</p>
             </div>
             <div class="form-row">
               <div class="form-group col-md-6">
                 <label for="inputSenha">Senha</label>
-                <input type="password" class="form-control" id="inputSenha">
+                <input type="password" class="form-control" id="senha">
+                <p class="erro inativo" id="erroSenhaCad">Insira uma senha </p>
               </div>
               <div class="form-group col-md-6">
                 <label for="inputSenha2">Confirme a senha</label>
-                <input type="password" class="form-control" id="inputSenha2">
+                <input type="password" class="form-control" id="senha2">
+                <p class="erro inativo" id="erroSenha2Cad">Insira uma senha</p>
               </div>
             </div>
             <div class="form-group">
@@ -178,27 +186,35 @@
             <div class="form-group">
               <label for="logradouro">Logradouro</label>
               <input type="text" class="form-control" id="logradouro">
+              <p class="erro inativo" id="erroLogradouroCad">Logradouro invalido</p>
+
             </div>
             
             <div class="form-row">
               <div class="form-group col-md-6">
                 <label for="bairro">Bairro</label>
                 <input type="text" class="form-control" id="bairro">
+              <p class="erro inativo" id="erroBairroCad">Bairro invalido</p>
+
               </div>
               <div class="form-group col-md-4">
                 <label for="estado">Estado</label>
                 <input type="text" name="inputEstado" id="estado" class="form-control">
+              <p class="erro inativo" id="erroEstadoCad">Estado invalido</p>
+
               </div>
               <div class="form-group col-md-2">
                 <label for="inputUF">UF</label>
                 <input type="text" class="form-control" id="UF">
+              <p class="erro inativo" id="erroUfCad">UF invalida</p>
+
               </div>
             </div>
             
           </form>
         </div>
         <div class="modal-footer botao-form">
-          <a href="principal.html"><button type="button" class="btn btn-primary">Cadastrar</button></a>
+          <a href="#" id="linkCadastro"><button type="button" class="btn btn-primary" id="btnCadastro">Cadastrar</button></a>
           
         </div>
       </div>
