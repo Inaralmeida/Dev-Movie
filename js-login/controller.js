@@ -9,3 +9,15 @@ class UserControllerLocalizacao{
     }
   
 }
+
+class Controller{
+
+    verificaCampos(listaCampos){
+        let dados = new Model()
+        dados.verificaCampos(listaCampos)
+
+        let view = new View()
+        view.liberaBotao(dados)
+
+    }
+}

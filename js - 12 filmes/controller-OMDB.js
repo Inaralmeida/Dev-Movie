@@ -1,11 +1,6 @@
 class controllerFilme
 {
-    testafilmeDB(filme)
-    {
-        let modelTestaFilme = new modelFilme();
-        modelTestaFilme.buscaFilme(filme)
-
-    }
+  
     mostra12filmes(filme,i)
     {   
         let model12Filmes = new modelFilme();

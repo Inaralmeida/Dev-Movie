@@ -1,6 +1,6 @@
 class viewFilme
 {   
-    mostraDados(dados,i)
+    mostraDados(dados,i) //mostra os 12 filmes na pagina principal
     {   
         let section = document.querySelector('.section-cards')
 
@@ -16,7 +16,7 @@ class viewFilme
         </div>`  
     }
 
-    mostraDadosBusca(dados)
+    mostraDadosBusca(dados) // essa função habilita o display none na pagina com 12 filmes e adiciona na pagina as informacoes do filme buscado
     {
         let sectionCards = document.querySelector('.section-cards')
         sectionCards.classList.add('inativo')
@@ -71,7 +71,7 @@ class viewFilme
     
     }
 
-    mostraErro()
+    mostraErro() //display none nas paginas dos 12 filmes e na de informacoes e habilita a pagina de erro
     {   
         let sectionCards = document.querySelector('.section-cards')
         sectionCards.classList.add('inativo')

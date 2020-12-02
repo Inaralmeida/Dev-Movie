@@ -5,6 +5,16 @@ body{
     background: black;
 }
 
+.font{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
+
+}
+
+label{
+    color: #fca311;
+}
+
 
 .botao-input a{
     text-align: center;
@@ -59,7 +69,8 @@ body{
     padding: 15px;
     background-image: linear-gradient(to top, #555, #999);
     text-decoration: none;
-    box-shadow: 7px -7px 8px   #1184b1c0;
+    box-shadow: 2px -2px 18px   #f5be65af;
+    border: none;
     cursor: pointer;
 }
 
@@ -98,10 +109,35 @@ body{
 /* INFORMAÇÔES */
 .section-info{
     color: #fff;
+    border: 10px ridge #fca311;
+    box-shadow: 2px -2px 18px white;
+    background-image: linear-gradient(to bottom, #333, #333);
 }
 
 .img-info{
     width: 90%;
     
     height: auto;
+}
+
+/* boas-vindas */
+.fundo-transparente{
+    background: #474849d5;
+   
+}
+
+.box-texto{
+
+    margin: 5px auto;
+    
+    
+}
+
+footer{
+    width: 100%;
+    height: 40px;
+    line-height: 32px;
+    font-size:20px;
+    background: #343A40;
+    color: wheat;
 }

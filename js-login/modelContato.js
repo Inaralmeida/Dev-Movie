@@ -12,7 +12,7 @@ class UserModelContato{
     if(!email.length > 0){
         
         this._statusEmail = false
-        console.log(this._statusEmail)
+        
     }else{
         
         this._statusEmail = true
